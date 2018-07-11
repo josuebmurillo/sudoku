@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		table,
+		th,
+		td {
+			border: 5px solid black;
+			border-collapse: collapse
+		}
+
+		th,
+		td {
+			padding: 5px;
+			width: 30px;
+			height: 30px;
+		}
+
+		table input {
+			width: 29px;
+			height: 29px;
+			text-align: center;
+		}
+	</style>
+	<script>
+		window.onload = function () {
+			var fila1 = document.getElementsByClassName("A");
+			var fila2 = document.getElementsByClassName("B");
+			var fila3 = document.getElementsByClassName("C");
+			var fila4 = document.getElementsByClassName("D");
+
+			var input_reset = document.getElementsByClassName("input");
+
+			var colum1 = document.getElementsByClassName("1");
+			var colum2 = document.getElementsByClassName("2");
+			var colum3 = document.getElementsByClassName("3");
+			var colum4 = document.getElementsByClassName("4");
+
+			var Boton = document.getElementById("revision")
+
+			Boton.onclick = revision;
+			fila1.on
+			/* event listener */
+			//document.getElementsByName("Thing")[0].addEventListener('change', doThing);
+			function revision() {
+				for (x = 0; x < fila1.length; x++) {
+					for (y = 0; y < fila1.length; y++) {
+						if (fila1[x].id != fila1[y].id) {
+							if (fila1[x].value == fila1[y].value) {
+								fila1[x].style.backgroundColor = "red";
+							} 
+						} 
+					}
+				}
+			}
+			function revisioncolum() {
+				for (x = 0; x < colum1.length; x++) {
+					if (colum1[x].value == colum2[x].value) {
+						colum1[x].style.backgroundColor = "red"; colum2[x].style.backgroundColor = "red";
+
+					} else {
+						colum1[x].style.backgroundColor = "#FFFFFF"; colum2[x].style.backgroundColor = "#FFFFFF";
+					}
+				}
+				for (x = 0; x < colum1.length; x++) {
+					if (colum1[x].value == colum3[x].value) {
+						colum1[x].style.backgroundColor = "red"; colum3[x].style.backgroundColor = "red";
+
+					} else {
+						colum1[x].style.backgroundColor = "#FFFFFF"; colum3[x].style.backgroundColor = "#FFFFFF";
+					}
+				}
+				for (x = 0; x < colum1.length; x++) {
+					if (colum1[x].value == colum4[x].value) {
+						colum1[x].style.backgroundColor = "red"; colum4[x].style.backgroundColor = "red";
+
+					} else {
+						colum1[x].style.backgroundColor = "#FFFFFF"; colum4[x].style.backgroundColor = "#FFFFFF";
+					}
+				}
+				for (x = 0; x < colum2.length; x++) {
+					if (colum2[x].value == colum3[x].value) {
+						colum2[x].style.backgroundColor = "red"; colum3[x].style.backgroundColor = "red";
+
+					} else {
+						colum2[x].style.backgroundColor = "#FFFFFF"; colum3[x].style.backgroundColor = "#FFFFFF";
+					}
+				}
+				for (x = 0; x < colum2.length; x++) {
+					if (colum2[x].value == colum4[x].value) {
+						colum2[x].style.backgroundColor = "red"; colum4[x].style.backgroundColor = "red";
+
+					} else {
+						colum2[x].style.backgroundColor = "#FFFFFF"; colum4[x].style.backgroundColor = "#FFFFFF";
+					}
+				}
+				for (x = 0; x < colum3.length; x++) {
+					if (colum3[x].value == colum4[x].value) {
+						colum3[x].style.backgroundColor = "red"; colum4[x].style.backgroundColor = "red";
+
+					} else {
+						colum3[x].style.backgroundColor = "#FFFFFF"; colum4[x].style.backgroundColor = "#FFFFFF";
+					}
+				}
+			}
+
+			// for (i = 0; i < fila1.length; i++) {
+			// 	fila1[i].addEventListener('change', false);
+			// }
+			// for (i = 0; i < fila2.length; i++) {
+			// 	fila2[i].addEventListener('change', false);
+			// }
+			// for (i = 0; i < fila3.length; i++) {
+			// 	fila3[i].addEventListener('change', false);
+			// }
+			// for (i = 0; i < fila4.length; i++) {
+			// 	fila4[i].addEventListener('change', false);
+			// }
+			// for (i = 0; i < colum1.length; i++) {
+			// 	colum1[i].addEventListener('change', false);
+			// }
+			// for (i = 0; i < colum2.length; i++) {
+			// 	colum2[i].addEventListener('change', false);
+			// }
+			// for (i = 0; i < colum3.length; i++) {
+			// 	colum3[i].addEventListener('change', false);
+			// }
+			// for (i = 0; i < colum4.length; i++) {
+			// 	colum4[i].addEventListener('change', false);
+			// }
+		}
+	</script>
+</head>
+
+<body>
+	<p>
+		<form>
+			<table style="height:100%" class="cuadricula">
+
+				<tr>
+					<td>
+						<input class="input A 1 " id="A1" type="text" maxlength="1" readonly value="4">
+					</td>
+					<td>
+						<input class="input A 2" id="A2" type="text" maxlength="1">
+					</td>
+					<td>
+						<input class="input A 3" id="A3" type="text" maxlength="1">
+					</td>
+					<td>
+						<input class="input A 4" id="A4" type="text" maxlength="1">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input class="input B 1 " id="B1" type="text" maxlength="1">
+					</td>
+					<td>
+						<input class="input B 2 " id="B2" type="text" maxlength="1">
+					</td>
+					<td>
+						<input class="input B 3" id="B3" type="text" maxlength="1" readonly value="1">
+					</td>
+					<td>
+						<input class="input B 4" id="B4" type="text" maxlength="1">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input class="input C 1" id="C1" type="text" maxlength="1">
+					</td>
+					<td>
+						<input class="input C 2" id="C2" type="text" maxlength="1" readonly value="2">
+					</td>
+					<td>
+						<input class="input C 3" id="C3" type="text" maxlength="1">
+					</td>
+					<td>
+						<input class="input C 4" id="C4" type="text" maxlength="1">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input class="input D 1" id="D1" type="text" maxlength="1">
+					</td>
+					<td>
+						<input class="input D 2" id="D2" type="text" maxlength="1" readonly value="4">
+					</td>
+					<td>
+						<input class="input D 3" id="D3" type="text" maxlength="1">
+					</td>
+					<td>
+						<input class="input D 4" id="D4" type="text" maxlength="1">
+					</td>
+				</tr>
+
+			</table>
+			<input type="reset" id="reset">
+			<input type="button" value="Revisar" id="revision">
+		</form>
+
+	</p>
+</body>

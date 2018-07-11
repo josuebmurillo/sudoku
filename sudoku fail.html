@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		table,
+		th,
+		td {
+			border: 5px solid black;
+			border-collapse: collapse
+		}
+
+		th,
+		td {
+			padding: 5px;
+			width: 30px;
+			height: 30px;
+		}
+
+		table input {
+			width: 29px;
+			height: 29px;
+			text-align: center;
+		}
+	</style>
+	<script>
+		window.onload = function () {
+			var fila1 = document.getElementsByClassName("A");
+			var fila2 = document.getElementsByClassName("B");
+			var fila3 = document.getElementsByClassName("C");
+			var fila4 = document.getElementsByClassName("D");
+
+			var colum1 = document.getElementsByClassName("1");
+			var colum2 = document.getElementsByClassName("2");
+			var colum3 = document.getElementsByClassName("3");
+			var colum4 = document.getElementsByClassName("4");
+			/* event listener */
+			//document.getElementsByName("Thing")[0].addEventListener('change', doThing);
+
+			/* function */
+			function revisionfila() {
+				for (x = 0; x < fila1.length; x++) {
+					if (fila1[x].value == fila2[x].value) {
+						fila1[x].style.backgroundColor = "red"; fila2[x].style.backgroundColor = "red";
+						//alert("iguales")
+					} else {
+						fila1[x].style.backgroundColor = "#FFFFFF"; fila2[x].style.backgroundColor = "#FFFFFF";
+					}
+					if (fila1[x].value == fila3[x].value) {
+						fila1[x].style.backgroundColor = "red"; fila3[x].style.backgroundColor = "red";
+						//alert("iguales")
+					} else {
+						fila1[x].style.backgroundColor = "#FFFFFF"; fila3[x].style.backgroundColor = "#FFFFFF";
+					}
+					if (fila1[x].value == fila4[x].value) {
+						fila1[x].style.backgroundColor = "red"; fila4[x].style.backgroundColor = "red";
+						//alert("iguales")
+					} else {
+						fila1[x].style.backgroundColor = "#FFFFFF"; fila4[x].style.backgroundColor = "#FFFFFF";
+					}
+					if (fila2[x].value == fila3[x].value) {
+						fila2[x].style.backgroundColor = "red"; fila3[x].style.backgroundColor = "red";
+						//alert("iguales")
+					} else {
+						fila2[x].style.backgroundColor = "#FFFFFF"; fila3[x].style.backgroundColor = "#FFFFFF";
+					}
+					if (fila2[x].value == fila4[x].value) {
+						fila2[x].style.backgroundColor = "red"; fila4[x].style.backgroundColor = "red";
+						//alert("iguales")
+					} else {
+						fila2[x].style.backgroundColor = "#FFFFFF"; fila4[x].style.backgroundColor = "#FFFFFF";
+					}
+					if (fila3[x].value == fila4[x].value) {
+						fila3[x].style.backgroundColor = "red"; fila4[x].style.backgroundColor = "red";
+						//alert("iguales")
+					} else {
+						fila3[x].style.backgroundColor = "#FFFFFF"; fila4[x].style.backgroundColor = "#FFFFFF";
+					}
+				}
+
+				// Validar los valores del array classname y verificar que no hay duplicados
+				//variable booleana
+
+				/*(IF variable booleana is false)
+					cambie de color rojo
+				*/
+
+			}
+			function revisioncolum() {
+
+				for (x = 0; x < colum1.length; x++) {
+					if (colum1[x].value == colum2[x].value) {
+						colum1[x].style.backgroundColor = "red"; colum2[x].style.backgroundColor = "red";
+						//alert("iguales")
+					} else {
+						colum1[x].style.backgroundColor = "#FFFFFF"; colum2[x].style.backgroundColor = "#FFFFFF";
+					}
+					if (colum1[x].value == colum3[x].value) {
+						colum1[x].style.backgroundColor = "red"; colum3[x].style.backgroundColor = "red";
+						//alert("iguales")
+					} else {
+						colum1[x].style.backgroundColor = "#FFFFFF"; colum3[x].style.backgroundColor = "#FFFFFF";
+					}
+					if (colum1[x].value == colum4[x].value) {
+						colum1[x].style.backgroundColor = "red"; colum4[x].style.backgroundColor = "red";
+						//alert("iguales")
+					} else {
+						colum1[x].style.backgroundColor = "#FFFFFF"; colum4[x].style.backgroundColor = "#FFFFFF";
+					}
+					if (colum2[x].value == colum3[x].value) {
+						colum2[x].style.backgroundColor = "red"; colum3[x].style.backgroundColor = "red";
+						//alert("iguales")
+					} else {
+						colum2[x].style.backgroundColor = "#FFFFFF"; colum3[x].style.backgroundColor = "#FFFFFF";
+					}
+					if (colum2[x].value == colum4[x].value) {
+						colum2[x].style.backgroundColor = "red"; colum4[x].style.backgroundColor = "red";
+						//alert("iguales")
+					} else {
+						colum2[x].style.backgroundColor = "#FFFFFF"; colum4[x].style.backgroundColor = "#FFFFFF";
+					}
+					if (colum3[x].value == colum4[x].value) {
+						colum3[x].style.backgroundColor = "red"; colum4[x].style.backgroundColor = "red";
+						//alert("iguales")
+					} else {
+						colum3[x].style.backgroundColor = "#FFFFFF"; colum4[x].style.backgroundColor = "#FFFFFF";
+					}
+
+					// Validar los valores del array classname y verificar que no hay duplicados
+					//variable booleana
+
+					/*(IF variable booleana is false)
+						cambie de color rojo
+					*/
+
+				}
+				for (i = 0; i < fila1.length; i++) {
+					fila1[i].addEventListener('change', revisionfila, false);
+				}
+				for (i = 0; i < fila2.length; i++) {
+					fila2[i].addEventListener('change', revisionfila, false);
+				}
+				for (i = 0; i < fila3.length; i++) {
+					fila3[i].addEventListener('change', revisionfila, false);
+				}
+				for (i = 0; i < fila4.length; i++) {
+					fila4[i].addEventListener('change', revisionfila, false);
+				}
+				for (i = 0; i < colum1.length; i++) {
+					colum1[i].addEventListener('change', revisioncolum, false);
+				}
+				for (i = 0; i < colum2.length; i++) {
+					colum2[i].addEventListener('change', revisioncolum, false);
+				}
+				for (i = 0; i < colum3.length; i++) {
+					colum3[i].addEventListener('change', revisioncolum, false);
+				}
+				for (i = 0; i < colum4.length; i++) {
+					colum4[i].addEventListener('change', revisioncolum, false);
+				}
+			}
+	</script>
+</head>
+
+<body>
+	<p>
+		<form>
+			<table style="height:100%" class="cuadricula">
+
+				<tr>
+					<td>
+						<input class="input A 1 " id="A1" type="text" maxlength="1" readonly value="4">
+					</td>
+					<td>
+						<input class="input A 2" id="A2" type="text" maxlength="1">
+					</td>
+					<td>
+						<input class="input A 3" id="A3" type="text" maxlength="1">
+					</td>
+					<td>
+						<input class="input A 4" id="A4" type="text" maxlength="1">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input class="input B 1 " id="B1" type="text" maxlength="1">
+					</td>
+					<td>
+						<input class="input B 2 " id="B2" type="text" maxlength="1">
+					</td>
+					<td>
+						<input class="input B 3" id="B3" type="text" maxlength="1" readonly value="1">
+					</td>
+					<td>
+						<input class="input B 4" id="B4" type="text" maxlength="1">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input class="input C 1" id="C1" type="text" maxlength="1">
+					</td>
+					<td>
+						<input class="input C 2" id="C2" type="text" maxlength="1" readonly value="2">
+					</td>
+					<td>
+						<input class="input C 3" id="C3" type="text" maxlength="1">
+					</td>
+					<td>
+						<input class="input C 4" id="C4" type="text" maxlength="1">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input class="input D 1" id="D1" type="text" maxlength="1">
+					</td>
+					<td>
+						<input class="input D 2" id="D2" type="text" maxlength="1" readonly value="4">
+					</td>
+					<td>
+						<input class="input D 3" id="D3" type="text" maxlength="1">
+					</td>
+					<td>
+						<input class="input D 4" id="D4" type="text" maxlength="1">
+					</td>
+				</tr>
+
+			</table>
+			<input type="reset">
+		</form>
+
+	</p>
+</body>
