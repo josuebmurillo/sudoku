@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<style>
 		table,
@@ -36,99 +37,124 @@
 			var colum3 = document.getElementsByClassName("3");
 			var colum4 = document.getElementsByClassName("4");
 
-			var Boton = document.getElementById("revision")
+			var Boton = document.getElementById("revision");
+			var reset_boton = document.getElementById("reset");
 
 			Boton.onclick = revision;
-			fila1.on
+			reset_boton.onclick = borrar;
 			/* event listener */
 			//document.getElementsByName("Thing")[0].addEventListener('change', doThing);
 			function revision() {
+				for (c = 0; c < input_reset.length; c++) {
+					input_reset[c].style.backgroundColor = "white";
+				}
+
+				//getElementById("input").removeAttribute("style");
 				for (x = 0; x < fila1.length; x++) {
 					for (y = 0; y < fila1.length; y++) {
 						if (fila1[x].id != fila1[y].id) {
 							if (fila1[x].value == fila1[y].value) {
 								fila1[x].style.backgroundColor = "red";
-							} 
-						} 
+							}
+						}
 					}
 				}
-			}
-			function revisioncolum() {
-				for (x = 0; x < colum1.length; x++) {
-					if (colum1[x].value == colum2[x].value) {
-						colum1[x].style.backgroundColor = "red"; colum2[x].style.backgroundColor = "red";
-
-					} else {
-						colum1[x].style.backgroundColor = "#FFFFFF"; colum2[x].style.backgroundColor = "#FFFFFF";
+				for (x = 0; x < fila2.length; x++) {
+					for (y = 0; y < fila2.length; y++) {
+						if (fila2[x].id != fila2[y].id) {
+							if (fila2[x].value == fila2[y].value) {
+								fila2[x].style.backgroundColor = "red";
+							}
+						}
+					}
+				}
+				for (x = 0; x < fila3.length; x++) {
+					for (y = 0; y < fila3.length; y++) {
+						if (fila3[x].id != fila3[y].id) {
+							if (fila3[x].value == fila3[y].value) {
+								fila3[x].style.backgroundColor = "red";
+							}
+						}
+					}
+				}
+				for (x = 0; x < fila4.length; x++) {
+					for (y = 0; y < fila4.length; y++) {
+						if (fila4[x].id != fila4[y].id) {
+							if (fila4[x].value == fila4[y].value) {
+								fila4[x].style.backgroundColor = "red";
+							}
+						}
 					}
 				}
 				for (x = 0; x < colum1.length; x++) {
-					if (colum1[x].value == colum3[x].value) {
-						colum1[x].style.backgroundColor = "red"; colum3[x].style.backgroundColor = "red";
-
-					} else {
-						colum1[x].style.backgroundColor = "#FFFFFF"; colum3[x].style.backgroundColor = "#FFFFFF";
-					}
-				}
-				for (x = 0; x < colum1.length; x++) {
-					if (colum1[x].value == colum4[x].value) {
-						colum1[x].style.backgroundColor = "red"; colum4[x].style.backgroundColor = "red";
-
-					} else {
-						colum1[x].style.backgroundColor = "#FFFFFF"; colum4[x].style.backgroundColor = "#FFFFFF";
+					for (y = 0; y < colum1.length; y++) {
+						if (colum1[x].id != colum1[y].id) {
+							if (colum1[x].style.backgroundColor != "red") {
+								if (colum1[x].value == colum1[y].value) {
+									colum1[x].style.backgroundColor = "red";
+								}
+							}
+						}
 					}
 				}
 				for (x = 0; x < colum2.length; x++) {
-					if (colum2[x].value == colum3[x].value) {
-						colum2[x].style.backgroundColor = "red"; colum3[x].style.backgroundColor = "red";
-
-					} else {
-						colum2[x].style.backgroundColor = "#FFFFFF"; colum3[x].style.backgroundColor = "#FFFFFF";
-					}
-				}
-				for (x = 0; x < colum2.length; x++) {
-					if (colum2[x].value == colum4[x].value) {
-						colum2[x].style.backgroundColor = "red"; colum4[x].style.backgroundColor = "red";
-
-					} else {
-						colum2[x].style.backgroundColor = "#FFFFFF"; colum4[x].style.backgroundColor = "#FFFFFF";
+					for (y = 0; y < colum2.length; y++) {
+						if (colum2[x].id != colum2[y].id) {
+							if (colum2[x].style.backgroundColor != "red") {
+								if (colum2[x].value == colum2[y].value) {
+									colum2[x].style.backgroundColor = "red";
+								}
+							}
+						}
 					}
 				}
 				for (x = 0; x < colum3.length; x++) {
-					if (colum3[x].value == colum4[x].value) {
-						colum3[x].style.backgroundColor = "red"; colum4[x].style.backgroundColor = "red";
-
-					} else {
-						colum3[x].style.backgroundColor = "#FFFFFF"; colum4[x].style.backgroundColor = "#FFFFFF";
+					for (y = 0; y < colum3.length; y++) {
+						if (colum3[x].id != colum3[y].id) {
+							if (colum3[x].style.backgroundColor != "red") {
+								if (colum3[x].value == colum3[y].value) {
+									colum3[x].style.backgroundColor = "red";
+								}
+							}
+						}
 					}
 				}
+				for (x = 0; x < colum4.length; x++) {
+					for (y = 0; y < colum4.length; y++) {
+						if (colum4[x].id != colum4[y].id) {
+							if (colum4[x].style.backgroundColor != "red") {
+								if (colum4[x].value == colum4[y].value) {
+									colum4[x].style.backgroundColor = "red";
+								}
+							}
+						}
+					}
+				}
+				for (x = 0; x < colum4.length; x++) {
+					for (y = 0; y < colum4.length; y++) {
+						if (colum4[x].id != colum4[y].id) {
+							if (colum4[x].style.backgroundColor != "red") {
+								if (colum4[x].value == colum4[y].value) {
+									colum4[x].style.backgroundColor = "red";
+								}
+							}
+						}
+					}
+				}
+
+				if(input_reset[0].style.backgroundColor == "white" && input_reset[1].style.backgroundColor == "white" && input_reset[2].style.backgroundColor == "white" && input_reset[3].style.backgroundColor == "white" && input_reset[4].style.backgroundColor == "white" && input_reset[5].style.backgroundColor == "white" && input_reset[6].style.backgroundColor == "white" && input_reset[7].style.backgroundColor == "white" && input_reset[8].style.backgroundColor == "white" && input_reset[9].style.backgroundColor == "white" && input_reset[10].style.backgroundColor == "white" && input_reset[11].style.backgroundColor == "white" && input_reset[12].style.backgroundColor == "white" && input_reset[13].style.backgroundColor == "white" && input_reset[14].style.backgroundColor == "white" && input_reset[15].style.backgroundColor == "white" ){
+					alert( input_reset[1].style.backgroundColor )
+				}
+								
 			}
 
-			// for (i = 0; i < fila1.length; i++) {
-			// 	fila1[i].addEventListener('change', false);
-			// }
-			// for (i = 0; i < fila2.length; i++) {
-			// 	fila2[i].addEventListener('change', false);
-			// }
-			// for (i = 0; i < fila3.length; i++) {
-			// 	fila3[i].addEventListener('change', false);
-			// }
-			// for (i = 0; i < fila4.length; i++) {
-			// 	fila4[i].addEventListener('change', false);
-			// }
-			// for (i = 0; i < colum1.length; i++) {
-			// 	colum1[i].addEventListener('change', false);
-			// }
-			// for (i = 0; i < colum2.length; i++) {
-			// 	colum2[i].addEventListener('change', false);
-			// }
-			// for (i = 0; i < colum3.length; i++) {
-			// 	colum3[i].addEventListener('change', false);
-			// }
-			// for (i = 0; i < colum4.length; i++) {
-			// 	colum4[i].addEventListener('change', false);
-			// }
+			function borrar() {
+				for (a = 0; a < input_reset.length; a++) {
+					input_reset[a].style.backgroundColor = null;
+				}
+			}
 		}
+
 	</script>
 </head>
 
